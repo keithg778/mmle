@@ -34,14 +34,7 @@
       viewer.scene.mode = Cesium.SceneMode.SCENE2D;
 
       const mmle = viewer.dataSources.add(
-        Cesium.GeoJsonDataSource.load('MRT_5N.GEOJASON',
-          {
-            //stroke: Cesium.Color.HOTPINK,
-            //fill: Cesium.Color.PINK,
-            //strokeWidth: 10,
-            markerSymbol: "?",
-          },
-          geojsonOptions
+        Cesium.GeoJsonDataSource.load('MRT_5N.GEOJASON'
         )
       );
 
@@ -51,4 +44,5 @@
     </script>
   </body>
 </html>
+
 
