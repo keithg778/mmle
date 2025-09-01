@@ -16,7 +16,7 @@
                 "name:ar": null,
                 "osm_id": 1095154798,
                 "osm_type": "ways_line",
-                "stroke": "#db4c20"
+                "stroke": "#000ff"
             },
             "geometry": {
                 "type": "LineString",
