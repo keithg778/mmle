@@ -1,0 +1,76 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "GCC",
+                "name:en": null,
+                "railway": "rail",
+                "ele": null,
+                "operator:type": null,
+                "layer": null,
+                "addr:full": null,
+                "addr:city": null,
+                "source": null,
+                "name:ar": null,
+                "osm_id": 1095154798,
+                "osm_type": "ways_line",
+                "stroke": "#49e048"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        49.0802,
+                        24.13627
+                    ],
+                    [
+                       51.53383,
+                        24.13810
+                    ],
+                    [
+                        50.73371,
+                        24.76042
+                    ],
+                    [
+                        50.35811,
+                        25.35390
+                    ],
+                    [
+                        50.00847,
+                        25.92371
+                    ],
+                    [
+                        49.98157,
+                        26.11707
+                    ],
+                    [
+                        49.98289,
+                        26.11212
+                    ],
+                    [
+                        49.55227,
+                        26.98406
+                    ],
+                    [
+                        48.87554,
+                        27.51411
+                    ],
+                    [
+                        48.74862,
+                        27.71419
+                    ],
+                    [
+                        48.52516,
+                        28.16363
+                    ],
+                    [
+                        48.49671,
+                        28.43325
+                    ]
+                ]
+            }
+        }
+    ]
+}
