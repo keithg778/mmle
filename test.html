@@ -15,7 +15,9 @@
         $(document).ready(function () {
             $("#fetch").click(function (event) {
                 $.getJSON(url, function (data) {
-                    $('#display').html('<p> GUID: ' + emp.name + '</p>');
+for (var i=0; i<4; i++){
+                    $('#display').html('<p> GUID: ' + data[i].instances.instanceId + '</p>');
+}
                     
                 });
             });
@@ -36,9 +38,6 @@
 </body>
 
 </html>
-
-    
-
 
 
 
