@@ -1,23 +1,44 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-  <meta charset="utf-8">
-  <title>sample</title>
-</head>
-<body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script language="javascript" type="text/javascript">
-    // Where to get the JSON data
+    <title>jQuery getJSON() Method</title>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <!-- Script to get JSON file and display its content -->
+    <script type="text/javascript" language="javascript">
+// Where to get the JSON data
     const url = "https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=100";
 
-    $.getJSON(url, function (data) {
-      for (var i=0; i<4; i++){
-        console.log(data[i].instances.instanceId);
-      }
-    });
-  </script>
+        $(document).ready(function () {
+            $("#fetch").click(function (event) {
+                $.getJSON(url, function (data) {
+                    $('#display').html('<p> GUID: ' + emp.name + '</p>');
+                    
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <p> Click on the button to fetch meta data </p>
+
+    <div id="display" 
+         style="background-color:#39B54A;">
+    </div>
+    <input type="button" 
+           id="fetch" 
+           value="Fetch GUID" />
 </body>
+
 </html>
+
     
+
 
 
 
