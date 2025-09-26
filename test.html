@@ -16,7 +16,7 @@
             $("#fetch").click(function (event) {
                 $.getJSON(url, function (data) {
 for (var i=0; i<4; i++){
-                    $('#display').html('<p> GUID: ' + data[i].instances.instanceId + '</p>');
+                    $('#display').html('<p> GUID: ' + data[i].instances[1].instanceId + '</p>');
 }
                     
                 });
@@ -38,6 +38,7 @@ for (var i=0; i<4; i++){
 </body>
 
 </html>
+
 
 
 
