@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>sample</title>
+</head>
 <body>
-<script
-src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script> (function($){
-$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=resig&tagmode=all&
-format=json&jsoncallback=?",
-// Using ? just means call the callback function provided.
-function (data) { // Data is the JSON object from Flickr.
-$.each(data.items, function (i, item) { $('<img />').attr("src",
-item.media.m).appendTo('body'); if (i == 30) return false; });
-});
-})(jQuery); </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript">
+    // Where to get the JSON data
+    const url = "https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=100";
+
+    $.getJSON(url, function (data) {
+      for (var i=0; i<4; i++){
+        console.log(JSON.stringify(data[i].instances.instanceId));
+      }
+    });
+  </script>
 </body>
 </html>
