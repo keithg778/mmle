@@ -1,42 +1,23 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>jQuery getJSON() Method</title>
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
 
-    <!-- Script to get JSON file and display its content -->
-    <script type="text/javascript" language="javascript">
-// Where to get the JSON data
-    const url = "https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=100";
-
-        $(document).ready(function () {
-            $("#fetch").click(function (event) {
-                $.getJSON(url, function (data) {
-for (var i=0; i<4; i++){
-                    $('#display').html('<p> GUID: ' + data[i].instances[1].instanceId + '</p>');
-}
-                    
-                });
-            });
-        });
-    </script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=1", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
 </head>
-
 <body>
 
-    <p> Click on the button to fetch meta data </p>
+<button>Send an HTTP GET request to a page and get the result back</button>
 
-    <div id="display" 
-         style="background-color:#39B54A;">
-    </div>
-    <input type="button" 
-           id="fetch" 
-           value="Fetch GUID" />
 </body>
-
 </html>
 
 
