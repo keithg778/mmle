@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -8,58 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script language="javascript" type="text/javascript">
     // Where to get the JSON data
-    const url = "{
-    "instances": [
-        {
-            "instanceId": "9fdccc86-451d-4dca-84af-243459fc27d8",
-            "schemaName": "PW_WSG",
-            "className": "Document",
-            "properties": {
-                "CreateTime": "2023-12-07T17:47:25.937Z",
-                "CreatedById": 1141,
-                "Description": "FormE - Vehicular Access Points",
-                "EnvironmentId": 102,
-                "FileName": "TRAN01-KAW-ZZ-CVL-WEA-E-OH-000102.docx",
-                "FileSize": "50783",
-                "FileUpdateTime": "2023-12-07T17:47:26.327Z",
-                "FileUpdatedById": 1141,
-                "IsFinal": false,
-                "IsLatest": true,
-                "IsLocked": false,
-                "IsWriteable": false,
-                "IsWorkflowStateChangeable": false,
-                "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                "Name": "TRAN01-KAW-ZZ-CVL-WEA-E-OH-000102",
-                "ParentGuid": "333ba132-92e9-421e-90fa-8bb86e0803d6",
-                "Sequence": 0,
-                "StateId": 62,
-                "UpdateTime": "2023-12-07T17:48:33.657Z",
-                "UpdatedById": 387,
-                "Version": "",
-                "WorkflowId": 40,
-                "OwnerId": 1141,
-                "ApplicationId": 10,
-                "HasConflicts": false,
-                "FileRevision": "",
-                "CreatedBy": "Simon.Warren@amey.co.uk",
-                "FileUpdatedBy": "Simon.Warren@amey.co.uk",
-                "IsCheckedOut": false,
-                "IsReadOnly": true,
-                "RelativeDirectory": "dms42261",
-                "StateString": "ReadOnly",
-                "Status": "Checked In",
-                "UpdatedBy": "_PWPS",
-                "Storage": "Storage",
-                "Workflow": "Project - Record Drawings",
-                "State": "View",
-                "Owner": "Simon.Warren@amey.co.uk",
-                "OwnerType": "User",
-                "Application": "Microsoft Word"
-            },
-            "eTag": "\"BM5oX+wpa/VUeoShQtBbeKH9KJs=\""
-        }
-    ]
-}";
+    const url = "https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=100";
 
     $.getJSON(url, function (data) {
       for (var i=0; i<4; i++){
@@ -69,5 +17,6 @@
   </script>
 </body>
 </html>
+    
 
 
