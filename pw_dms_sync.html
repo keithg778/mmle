@@ -18,11 +18,7 @@
                 url: url1,
                 success: function(json) {
                     alert("Success", json);
-                },
-				xhrFields: {
-                			   withCredentials: true
-                			},
-                crossDomain: true,
+                },			    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
                     console.log(errorThrown);
@@ -32,8 +28,7 @@
                 //},
                 beforeSend: function(xhr) {
                    xhr.setRequestHeader("Authorization", "Basic " + btoa(u1 + ":" + p1));
-                },
-				
+                },				
                 type: 'GET',
                 dataType: 'json',
             });
