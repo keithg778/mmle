@@ -16,10 +16,10 @@
             var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=10';
             $.ajax({
                 url: url1,
-                success: function(json) {
-                    alert("Success", json);
-			
-                },			    
+                success: function(data) {
+                    //alert("Success", json);
+					console.log(data);
+			     },			    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
                     console.log(errorThrown);
