@@ -34,13 +34,9 @@ function arrayToTable(tableData) {
 			//var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
             $.ajax({
                 url: url1,
-                success: function(data) {
- for (var i = 0; i < data.length; i++) {
- alert(data[i].instances.instanceId);
-
-					
-					//for (var i=0; i<data.length; i++){
-                   // $('#display').html('<p> GUID: ' + data[i].instances.instanceId + '</p>');
+                success: function(data) {				
+					for (var i=0; i<data.length; i++){
+                    $('#display').html('<p> GUID: ' + data[i].instances.instanceId + '</p>');
                  //console.log(JSON.stringify(data));
 			     }},				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
