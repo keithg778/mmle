@@ -29,9 +29,7 @@ function arrayToTable(tableData) {
             $.ajax({
                 url: url1,
                 success: function(data) {
-                var obj = JSON.parse(data);
-                console.log(obj.name);
-		         //console.log(JSON.stringify(data));
+                console.log(JSON.stringify(data));
 			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
