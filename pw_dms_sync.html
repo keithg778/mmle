@@ -28,7 +28,7 @@ function arrayToTable(tableData) {
             var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=10';
             $.ajax({
                 url: url1,
-                success: success: function (data) {
+                success: function (data) {
         $('body').append(arrayToTable(data));
  			     },			    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
