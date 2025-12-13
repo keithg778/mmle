@@ -28,9 +28,11 @@ function arrayToTable(tableData) {
             var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=10';
             $.ajax({
                 url: url1,
-                success: function (data) {
-        $('body').append(arrayToTable(data));
- 			     },			    
+                success: function(data) {
+                var obj = JSON.parse(data);
+                console.log(obj.name);
+		         //console.log(JSON.stringify(data));
+			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
                     console.log(errorThrown);
