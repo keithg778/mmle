@@ -35,7 +35,9 @@ function arrayToTable(tableData) {
                 url: url1,
                 success: function(data) {				
 					for (var i=0; i<data.length; i++){
-                    $('#display').html('<p> GUID: ' + data[i].instanceId + '</p>');
+                   // $('#display').html('<p> GUID: ' + data[i].instanceId + '</p>');
+						alert(data[i].instanceId);
+
 					}
                 // console.log(JSON.stringify(data));
 			     },				    
