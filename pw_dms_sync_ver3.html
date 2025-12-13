@@ -35,9 +35,13 @@ function arrayToTable(tableData) {
             $.ajax({
                 url: url1,
                 success: function(data) {
+ for (var i = 0; i < data.length; i++) {
+ alert(data[i].instances.instanceId);
+
+					
 					//for (var i=0; i<data.length; i++){
                    // $('#display').html('<p> GUID: ' + data[i].instances.instanceId + '</p>');
-                 console.log(JSON.stringify(data));
+                 //console.log(JSON.stringify(data));
 			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
