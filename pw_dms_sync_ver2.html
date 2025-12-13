@@ -22,7 +22,9 @@ function arrayToTable(tableData) {
 }
 	
         function getMetaData() {
+			var u2 = $("#u").val();
             var u1 = "ComplyProTestUser";
+			var p2 = $("#p");
             var p1 = "Complypro-1";
 			evdRef = "AMD.Documentation.pdf";
 
@@ -32,6 +34,7 @@ function arrayToTable(tableData) {
             $.ajax({
                 url: url1,
                 success: function(data) {
+					alert(u2 + ":" + p2);
                 console.log(JSON.stringify(data));
 			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -51,6 +54,10 @@ function arrayToTable(tableData) {
         }
 	
     </script>
+	User Name </br>
+	<input id= "u" type="text"> <br>
+	Password <br>
+	<input id = "p" type = "password"><br>
     <input type="button" onclick="getMetaData()" value="Submit">
 </body>
 
