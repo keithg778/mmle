@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+  var u1 = $('#u1').val();
+  var p1 = $('#p1').val();
+  var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document?&filter=isLatest+eq+true+and+FileName+like+%27'+$('#evdRef').val() + '%27';
+             $.ajax({
+                url: url1,
+                success: function(data) {
+                console.log(JSON.stringify(data));
+		},			    
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(textStatus, errorThrown);
+                    console.log(errorThrown);
+                },
+               // headers: {
+                //'Authorization': 'Basic bWFkaHVhOndlbGNvbWUxMjM=',
+                //},
+                beforeSend: function(xhr) {
+                   xhr.setRequestHeader("Authorization", "Basic " + btoa(u1 + ":" + p1));
+                },				
+                type: 'GET',
+                dataType: 'json',
+            });
+  });
+});
+</script>
+</head>
+<body>
+Evidence Reference:<br>
+<input type="text" id="evdRef" name="u1"><br>
+User Name: <br>
+ <input type="text" id="u" name="u1"><br>
+Password: <br>
+ <input type="password" id="p" name="p1"><br><br>
+ <button>Get meta-data</button>
+</body>
+</html>
