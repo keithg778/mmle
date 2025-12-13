@@ -28,16 +28,17 @@ function arrayToTable(tableData) {
             //var p1 = "Complypro-1";
 			//var d1 = "AMD.Documentation.pdf";
 			 var d1 = $("#evdRef").val();         
-			var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=10';
+			//var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=10';
 			// var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27AMD.Documentation.pdf%27"
-			//var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
+		var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
             $.ajax({
                 url: url1,
                 success: function(data) {				
-					for (var i=0; i<data.length; i++){
-                    $('#display').html('<p> GUID: ' + data[i].instances.instanceId + '</p>');
-                 //console.log(JSON.stringify(data));
-			     }},				    
+					//for (var i=0; i<data.length; i++){
+                    //$('#display').html('<p> GUID: ' + data[i].instances.instanceId + '</p>');
+					//}
+                 console.log(JSON.stringify(data));
+			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
                     console.log(errorThrown);
