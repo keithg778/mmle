@@ -7,7 +7,9 @@ $(document).ready(function(){
   $("button").click(function(){
   var u1 = $('#u1').val();
   var p1 = $('#p1').val();
-  var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document?&filter=isLatest+eq+true+and+FileName+like+%27'+$('#evdRef').val() + '%27';
+  //var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&filter=isLatest+eq+true+and+FileName+like+%27'+$('#evdRef').val() + '%27';
+	   var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=10';
+
              $.ajax({
                 url: url1,
                 success: function(data) {
