@@ -20,8 +20,8 @@ function arrayToTable(tableData) {
     });
     return table;
 }
-		
-        function NoCors() {
+	$( document ).ready(function() {	
+        function getMetaData() {
             var u1 = "ComplyProTestUser";
             var p1 = "Complypro-1";
 			evdRef = "AMD.Documentation.pdf";
@@ -49,9 +49,9 @@ function arrayToTable(tableData) {
             });
 
         }
-		
+	});	
     </script>
-    <input type="button" onclick="NoCors()" value="Submit">
+    <input type="button" onclick="getMetaData()" value="Submit">
 </body>
 
 </html>
