@@ -9,13 +9,14 @@
   //var p1 = $('#p1').val();
 	 var p1 = "Complypro-1";
 	  var evd = "AMD.Documentation.pdf";
-  var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+'"+ evd + "'";
+  var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27"+ evd + "%27";
 	  // var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=10';
 
              $.ajax({
                 url: url1,
                 success: function(data) {
-                console.log(JSON.stringify(data));
+                //console.log(JSON.stringify(data));
+					console.log(url1);
 		},			    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
