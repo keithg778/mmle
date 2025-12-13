@@ -9,6 +9,18 @@
 <body>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.0.min.js"></script>
     <script>
+function arrayToTable(tableData) {
+    var table = $('<table></table>');
+    $(tableData).each(function (i, rowData) {
+        var row = $('<tr></tr>');
+        $(rowData).each(function (j, cellData) {
+            row.append($('<td>'+cellData+'</td>'));
+        });
+        table.append(row);
+    });
+    return table;
+}
+		
         function NoCors() {
             var u1 = "ComplyProTestUser";
             var p1 = "Complypro-1";
@@ -16,13 +28,9 @@
             var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=10';
             $.ajax({
                 url: url1,
-                success: function(data) {
-                    //alert("Success", json);
-                var obj = JSON.parse(data);
-                console.log(obj.name);
-					
-					//console.log(JSON.stringify(data));
-			     },			    
+                success: success: function (data) {
+        $('body').append(arrayToTable(data));
+ 			     },			    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
                     console.log(errorThrown);
