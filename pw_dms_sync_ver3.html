@@ -34,11 +34,10 @@ function arrayToTable(tableData) {
             $.ajax({
                 url: url1,
                 success: function(data) {				
-					for (var i=0; i<data.length; i++){
+					//for (var i=0; i<data.length; i++){
                    // $('#display').html('<p> GUID: ' + data[i].instanceId + '</p>');
 						alert(JSON.stringify(data));
-
-					}
+					//}
                 // console.log(JSON.stringify(data));
 			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
