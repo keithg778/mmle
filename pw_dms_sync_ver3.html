@@ -30,7 +30,10 @@
 						alert("Success");
 					    console.log(data);
 					   // $('#display').append("<p>" + JSON.stringify(data) + "</p>");
-				
+					
+		if (data == null {
+			alert("Not found!");
+		} else {
 					for (var i=0; i<data.instances.length; i++){
 					      $('#display').append("<p> <b>GUID:</b>" + (data.instances[i].instanceId) + "</p>");
                          $('#display').append("<p> <b>Name:</b>" + (data.instances[i].properties.Name) + "</p>");
@@ -41,6 +44,7 @@
                          $('#display').append("<p> <b>Created By:</b>" + (data.instances[i].properties.CreatedBy) + "</p>");
 						
 					}
+		}
                 
 			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
