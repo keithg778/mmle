@@ -34,17 +34,19 @@
 		if (data.instances.length== 0) {
 			alert("Not found!");
 		} else {
-			$('#display').append('<table><tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>');
+			
 			for (var i=0; i<data.instances.length; i++){
-				$('#display').append("<tr><td>" + data.instances[i].instanceId + "</td>");
-                $('#display').append("<td>" + data.instances[i].properties.Name + "</td>");
-                $('#display').append("<td>" + data.instances[i].properties.FileName + "</td>");
-                $('#display').append("<td>" + data.instances[i].properties.Description + "</td>");
-			    $('#display').append("<td>" + data.instances[i].properties.Vesrion + "</td>");
-			    $('#display').append("<td>" + data.instances[i].properties.FileUpdatedBy + "</td>");
-                $('#display').append("<td>" + data.instances[i].properties.CreatedBy + "</td></tr>");
+				var head = '<tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>');
+				var guid = "<tr><td>" + data.instances[i].instanceId + "</td>";
+                var name ="<td>" + data.instances[i].properties.Name + "</td>";
+                var fname = "<td>" + data.instances[i].properties.FileName + "</td>";
+                var desc = "<td>" + data.instances[i].properties.Description + "</td>";
+			    var vers = "<td>" + data.instances[i].properties.Vesrion + "</td>";
+			    var updatedby = "<td>" + data.instances[i].properties.FileUpdatedBy + "</td>";
+                var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";
+				$('#display').append('<table>'+ head + guid + name + fname + desc + vers + updatedby + createdby + '</table>');
 					}
-			$('#display').append('</table>');
+			
 		}
                 
 			     },				    
