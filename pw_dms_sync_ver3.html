@@ -31,7 +31,7 @@
 					    console.log(data);
 					   // $('#display').append("<p>" + JSON.stringify(data) + "</p>");
 					
-		if (data == null) {
+		if (data.instances.length== 0) {
 			alert("Not found!");
 		} else {
 					for (var i=0; i<data.instances.length; i++){
