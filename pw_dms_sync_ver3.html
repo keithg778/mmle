@@ -34,14 +34,16 @@
 		if (data.instances.length== 0) {
 			alert("Not found!");
 		} else {
-					for (var i=0; i<data.instances.length; i++){
-					      $('#display').append("<p> <b>GUID:</b>" + (data.instances[i].instanceId) + "</p>");
-                         $('#display').append("<p> <b>Name:</b>" + (data.instances[i].properties.Name) + "</p>");
-                          $('#display').append("<p> <b>File Name:</b>" + (data.instances[i].properties.FileName) + "</p>");
-                          $('#display').append("<p> <b>Description:</b>" + (data.instances[i].properties.Description) + "</p>");
-						  $('#display').append("<p> <b>Version:</b>" + (data.instances[i].properties.Vesrion) + "</p>");
-						 $('#display').append("<p> <b>Updated By:</b>" + (data.instances[i].properties.FileUpdatedBy) + "</p>");
-                         $('#display').append("<p> <b>Created By:</b>" + (data.instances[i].properties.CreatedBy) + "</p>");
+			var meta_data_table = '<table><tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr><tr><td> data.instances[i].instanceId</td><td>data.instances[i].properties.Name</td><td>data.instances[i].properties.FileName</td><td>data.instances[i].properties.Description</td><td>data.instances[i].properties.Version</td><td>data.instances[i].properties.FileUpdatedBy</td><td>data.instances[i].properties.CreatedBy</td></table>';
+			for (var i=0; i<data.instances.length; i++){
+				$('#display').append(meta_data_table);
+					    //  $('#display').append("<p> <b>GUID:</b>" + (data.instances[i].instanceId) + "</p>");
+                        // $('#display').append("<p> <b>Name:</b>" + (data.instances[i].properties.Name) + "</p>");
+                        //  $('#display').append("<p> <b>File Name:</b>" + (data.instances[i].properties.FileName) + "</p>");
+                        //  $('#display').append("<p> <b>Description:</b>" + (data.instances[i].properties.Description) + "</p>");
+						//  $('#display').append("<p> <b>Version:</b>" + (data.instances[i].properties.Vesrion) + "</p>");
+						// $('#display').append("<p> <b>Updated By:</b>" + (data.instances[i].properties.FileUpdatedBy) + "</p>");
+                        // $('#display').append("<p> <b>Created By:</b>" + (data.instances[i].properties.CreatedBy) + "</p>");
 						
 					}
 		}
