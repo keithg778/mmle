@@ -33,12 +33,12 @@
 				
 					for (var i=0; i<data.instances.length; i++){
 					      $('#display').append("<p> <b>GUID:</b>" + (data.instances[i].instanceId) + "</p>");
-                         // $('#display').append("<p> <b>Name:</b>" + (data.instances[i].properties[i].Name) + "</p>");
-                          $('#display').append("<p> <b>File Name:</b>" + (data.instances[i].properties[i].FileName) + "</p>");
-                          $('#display').append("<p> <b>Description:</b>" + (data.instances[i].properties[i].Description) + "</p>");
-						 // $('#display').append("<p> <b>Version:</b>" + (data.instances[i].properties[i].Vesrion) + "</p>");
-						 // $('#display').append("<p> <b>Updated By:</b>" + (data.instances[i].properties[i].FileUpdatedBy) + "</p>");
-                         // $('#display').append("<p> <b>Created By:</b>" + (data.instances[i].properties[i].CreatedBy) + "</p>");
+                         $('#display').append("<p> <b>Name:</b>" + (data.instances[i].properties.Name) + "</p>");
+                          $('#display').append("<p> <b>File Name:</b>" + (data.instances[i].properties.FileName) + "</p>");
+                          $('#display').append("<p> <b>Description:</b>" + (data.instances[i].properties.Description) + "</p>");
+						  $('#display').append("<p> <b>Version:</b>" + (data.instances[i].properties.Vesrion) + "</p>");
+						 $('#display').append("<p> <b>Updated By:</b>" + (data.instances[i].properties.FileUpdatedBy) + "</p>");
+                         $('#display').append("<p> <b>Created By:</b>" + (data.instances[i].properties.CreatedBy) + "</p>");
 						
 					}
                 
