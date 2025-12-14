@@ -9,16 +9,7 @@
 <body>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.0.min.js"></script>
     <script>
-function arrayToTable(tableData) {
-    var table = $('<table></table>');
-    $(tableData).each(function (i, rowData) {
-        var row = $('<tr></tr>');
-        $(rowData).each(function (j, cellData) {
-            row.append($('<td>'+cellData+'</td>'));
-        });
-        table.append(row);
-    });
-    return table;
+
 }
 	
         function getMetaData() {
@@ -39,7 +30,7 @@ function arrayToTable(tableData) {
 						alert("Success");
 					    console.log(data);
 					   // $('#display').append("<p>" + JSON.stringify(data) + "</p>");
-					for (var i=0; i<data.length; i++){
+					for (var i=0; i<data.instances.length; i++){
 					      $('#display').append("<p> <b>GUID:</b>" + (data.instances[i].instanceId) + "</p>");
 					}
                 
