@@ -7,8 +7,7 @@
 <style>
 table, th, td {
   border: 1px solid black;
- 
-}
+ }
 th, td {
   padding: 5px;
 }
@@ -18,22 +17,19 @@ th, td {
 
 <body>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.0.min.js"></script>
-    <script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-
-	
+    <script>	
         function getMetaData() {
 			//var u1 = $("#u").val();
        		//var p1 = $("#p").val();
-         	//var d1 = "AMD.Documentation.pdf";
 			 var d1 = $("#evdRef").val();         
 			//var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=4';
-			// var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27AMD.Documentation.pdf%27"
-		var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
+     		var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
             $.ajax({
                 url: url1,
                 success: function(data) {				
-					    alert("Success!");
+				swal("Success!", "", "success");
 					    console.log(data);				   
 					
 		if (data.instances.length== 0) {
