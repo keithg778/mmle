@@ -33,11 +33,8 @@ th, td {
             $.ajax({
                 url: url1,
                 success: function(data) {				
-					//for (var i=0; i<data.length; i++){
-                   // $('#display').html('<p> GUID: ' + data[i].instanceId + '</p>');
-						alert("Success!");
-					    console.log(data);
-					   // $('#display').append("<p>" + JSON.stringify(data) + "</p>");
+					    alert("Success!");
+					    console.log(data);				   
 					
 		if (data.instances.length== 0) {
 			alert("Not found!");
