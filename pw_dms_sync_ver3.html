@@ -23,11 +23,9 @@ th, td {
 
 	
         function getMetaData() {
-			var u1 = $("#u").val();
-            //var u1 = "ComplyProTestUser";
-			var p1 = $("#p").val();
-            //var p1 = "Complypro-1";
-			//var d1 = "AMD.Documentation.pdf";
+			//var u1 = $("#u").val();
+       		//var p1 = $("#p").val();
+         	//var d1 = "AMD.Documentation.pdf";
 			 var d1 = $("#evdRef").val();         
 			//var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=4';
 			// var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27AMD.Documentation.pdf%27"
@@ -68,7 +66,7 @@ th, td {
                 //'Authorization': 'Basic bWFkaHVhOndlbGNvbWUxMjM=',
                 //},
                 beforeSend: function(xhr) {
-                   xhr.setRequestHeader("Authorization", "Basic " + btoa(u1 + ":" + p1));
+                   xhr.setRequestHeader("Authorization", "Basic Q29tcGx5UHJvVGVzdFVzZXI6Q29tcGx5cHJvLTE=");
                 },				
                 type: 'GET',
                 dataType: 'json',
@@ -77,13 +75,10 @@ th, td {
         }
 	
     </script>
-	User Name: </br>
-	<input id= "u" type="text"> <br>
-	Password: <br>
-	<input id = "p" type = "password"><br><br> 
-	Evidence Reference: <br>
+	Document Reference: <br>
 	<input id = "evdRef" type = "text"><br><br>
-	<input type="button" onclick="getMetaData()" value="Submit">
+	<input type="button" onclick="getMetaData()" value="Get meta-data">
+	<br>
 	<div id="display">
     </div>
 </body>
