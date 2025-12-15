@@ -28,14 +28,12 @@ th, td {
      		var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
             $.ajax({
                 url: url1,
-                success: function(data) {				
-				swal("Success!", "", "success");
-					    console.log(data);				   
-					
-		if (data.instances.length== 0) {
-			alert("Not found!");
-		} else {
-			
+                success: function(data) {	
+						console.log(data);		   
+			if (data.instances.length== 0) {
+			swal("Not found!", "", "warning");
+		    } else {
+			swal("Success!", "", "success");
 			for (var i=0; i<data.instances.length; i++){
 				var head = '<tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>';
 				var guid = "<tr><td>" + data.instances[i].instanceId + "</td>";
