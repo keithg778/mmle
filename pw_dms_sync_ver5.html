@@ -34,18 +34,16 @@ th, td {
 			swal("Not found!", "", "warning");
 		    } else {
 			swal("Success!", "", "success");
-		
-				$('#display').append('<table><tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>');
+				$('#display').append('<table>');
 			for (var i=0; i<data.instances.length; i++){
 				//var head = '<tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>';
-				var guid = "<tr><td>" + data.instances[i].instanceId + "</td>";
-                var name ="<td>" + data.instances[i].properties.Name + "</td>";
-                var fname = "<td>" + data.instances[i].properties.FileName + "</td>";
-                var desc = "<td>" + data.instances[i].properties.Description + "</td>";
-			    var vers = "<td>" + data.instances[i].properties.Version + "</td>";
-			    var updatedby = "<td>" + data.instances[i].properties.FileUpdatedBy + "</td>";
-                var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";
-				//$('#display').append('<table>'+ head + guid + name + fname + desc + vers + updatedby + createdby + '</table>');
+				var guid = "<tr><td><b>GUID:</b>" + data.instances[i].instanceId + "</td>";
+                var name ="<td><b>Name:</b>" + data.instances[i].properties.Name + "</td>";
+                var fname = "<td><b>FileName:</b>" + data.instances[i].properties.FileName + "</td>";
+                var desc = "<td><b>Description:</b>" + data.instances[i].properties.Description + "</td>";
+			    var vers = "<td><b>Version:</b>" + data.instances[i].properties.Version + "</td>";
+			    var updatedby = "<td><b>Updated By:</b>" + data.instances[i].properties.FileUpdatedBy + "</td>";
+                var createdby ="<td><b>Created By:</b>" + data.instances[i].properties.CreatedBy + "</td></tr>";
 				$('#display').append(guid + name + fname + desc + vers + updatedby + createdby);
 					}
 				$('#display').append('</table>');
