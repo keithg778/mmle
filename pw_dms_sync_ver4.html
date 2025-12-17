@@ -34,6 +34,7 @@ th, td {
 			swal("Not found!", "", "warning");
 		    } else {
 			swal("Success!", "", "success");
+				$('#display').html("<table>");							   
 			for (var i=0; i<data.instances.length; i++){
 				var head = '<tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>';
 				var guid = "<tr><td>" + data.instances[i].instanceId + "</td>";
@@ -43,9 +44,9 @@ th, td {
 			    var vers = "<td>" + data.instances[i].properties.Version + "</td>";
 			    var updatedby = "<td>" + data.instances[i].properties.FileUpdatedBy + "</td>";
                 var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";
-				$('#display').append('<table>'+ head + guid + name + fname + desc + vers + updatedby + createdby + '</table>');
+				$('#display').append(head + guid + name + fname + desc + vers + updatedby + createdby );
 					}
-			
+			$('#display').html("</table>");	
 		}
                 
 			     },				    
