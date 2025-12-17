@@ -44,9 +44,9 @@ th, td {
 			    var vers = "<td>" + data.instances[i].properties.Version + "</td>";
 			    var updatedby = "<td>" + data.instances[i].properties.FileUpdatedBy + "</td>";
                 var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";
-				$('#display').html(head + guid + name + fname + desc + vers + updatedby + createdby );
+				$('#display').append(head + guid + name + fname + desc + vers + updatedby + createdby );
 					}
-			$('#display').html("</table>");	
+			$('#display').append("</table>");	
 		}
                 
 			     },				    
