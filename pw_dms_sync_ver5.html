@@ -34,9 +34,8 @@ th, td {
 			swal("Not found!", "", "warning");
 		    } else {
 			swal("Success!", "", "success");
-				$('#display').append('<table>');
+				
 			for (var i=0; i<data.instances.length; i++){
-				//var head = '<tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>';
 				var guid = "<tr><td><b>GUID:</b>" + data.instances[i].instanceId + "</td>";
                 var name ="<td><b>Name:</b>" + data.instances[i].properties.Name + "</td>";
                 var fname = "<td><b>FileName:</b>" + data.instances[i].properties.FileName + "</td>";
@@ -44,9 +43,9 @@ th, td {
 			    var vers = "<td><b>Version:</b>" + data.instances[i].properties.Version + "</td>";
 			    var updatedby = "<td><b>Updated By:</b>" + data.instances[i].properties.FileUpdatedBy + "</td>";
                 var createdby ="<td><b>Created By:</b>" + data.instances[i].properties.CreatedBy + "</td></tr>";
-				$('#display').append(guid + name + fname + desc + vers + updatedby + createdby);
+				$('#mdata').append(guid + name + fname + desc + vers + updatedby + createdby);
 					}
-				$('#display').append('</table>');
+			
 		
 			
 		}
@@ -72,8 +71,10 @@ th, td {
 	Document Reference: <br>
 	<input id = "evdRef" type = "text"><br><br>
 	<input type="button" onclick="getMetaData()" value="Get meta-data">
-	<br>
+	<br><br><b></b>
 	<div id="display">
+		<table id = "mdata">
+		</table>
     </div>
 </body>
 
