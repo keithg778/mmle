@@ -54,9 +54,12 @@ th, td {
                     alert(textStatus, errorThrown);
                     console.log(errorThrown);
                 },
-               // headers: {
-                //'Authorization': 'Basic bWFkaHVhOndlbGNvbWUxMjM=',
+			  // headers: {
+                //'Authorization': 'Basic bWFkaHVhOndlbGNvbWUxMjM=',Access-Control-Allow-Credentials: true
                 //},
+ headers: { 'Access-Control-Allow-Origin': '*' },
+       crossDomain: true,
+				
                 beforeSend: function(xhr) {
                    xhr.setRequestHeader("Authorization", "Basic QmVudGxleS1DUC1QVy1BbWV5OkFtZXlAMjAyNQ==");
                 },				
