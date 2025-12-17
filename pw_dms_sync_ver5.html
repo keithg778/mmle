@@ -21,11 +21,12 @@ th, td {
 
     <script>	
         function getMetaData() {
-			var u1 = 'Bentley-CP-PW-Amey';
-       		var p1 = 'Amey@2025';
+			var u1 = '';
+       		var p1 = '';
 			 var d1 = $("#evdRef").val();         
-			//var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=4';
-     		var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
+     		//var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
+			var url1 = "https://amey-pw-ws.bentley.com/ws/v2.8/Repositories/Bentley.PW--amey-pw.bentley.com~3Aamey-pw-06/PW_WSG/Document!poly?$filter=FileName+like+%27" + d1 + "%27";
+
             $.ajax({
                 url: url1,
                 success: function(data) {	
@@ -34,7 +35,7 @@ th, td {
 			swal("Not found!", "", "warning");
 		    } else {
 			swal("Success!", "", "success");
-				alert(btoa(u1 + ":" + p1));
+		
 			for (var i=0; i<data.instances.length; i++){
 				var guid = "<tr><td><b>GUID:</b>" + data.instances[i].instanceId + "</td>";
                 var name ="<td><b>Name:</b>" + data.instances[i].properties.Name + "</td>";
@@ -45,9 +46,7 @@ th, td {
                 var createdby ="<td><b>Created By:</b>" + data.instances[i].properties.CreatedBy + "</td></tr>";
 				$('#mdata').append(guid + name + fname + desc + vers + updatedby + createdby);
 					}
-			
-		
-			
+							
 		}
                 
 			     },				    
@@ -59,7 +58,7 @@ th, td {
                 //'Authorization': 'Basic bWFkaHVhOndlbGNvbWUxMjM=',
                 //},
                 beforeSend: function(xhr) {
-                   xhr.setRequestHeader("Authorization", "Basic Q29tcGx5UHJvVGVzdFVzZXI6Q29tcGx5cHJvLTE=");
+                   xhr.setRequestHeader("Authorization", "Basic QmVudGxleS1DUC1QVy1BbWV5OkFtZXlAMjAyNQ==");
                 },				
                 type: 'GET',
                 dataType: 'json',
