@@ -21,11 +21,11 @@ th, td {
 
     <script>	
         function getMetaData() {
-			//var u1 = $("#u").val();
-       		//var p1 = $("#p").val();
+			var u1 = 'Bentley-CP-PW-Amey';
+       		var p1 = 'Amey@2025';
 			 var d1 = $("#evdRef").val();         
 			//var url1 = 'https://decide-eu-pw.bentley.com/ws/v2.4/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?$top=4';
-     		var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
+     		//var url1 = "https://decide-eu-pw.bentley.com/ws/v2.8/Repositories/Bentley.PW--decide-eu-pw.bentley.com~3Adecide-eu-pw-02/PW_WSG/Document!poly?&$filter=FileName+like+%27" + d1 + "%27";
             $.ajax({
                 url: url1,
                 success: function(data) {	
