@@ -34,7 +34,7 @@ th, td {
 			swal("Not found!", "", "warning");
 		    } else {
 			swal("Success!", "", "success");
-				$('#display').html("<table><tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>");							   
+			var	xhtml =("<table><tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>");							   
 			for (var i=0; i<data.instances.length; i++){
 				var guid = "<tr><td>" + data.instances[i].instanceId + "</td>";
                 var name ="<td>" + data.instances[i].properties.Name + "</td>";
@@ -42,12 +42,11 @@ th, td {
                 var desc = "<td>" + data.instances[i].properties.Description + "</td>";
 			    var vers = "<td>" + data.instances[i].properties.Version + "</td>";
 			    var updatedby = "<td>" + data.instances[i].properties.FileUpdatedBy + "</td>";
-                var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";
-				$('#display').append(guid + name + fname + desc + vers + updatedby + createdby );
+                var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";			
 					}
-			$('#display').append("</table>");	
+				xhtml = xhtml + guid + name + fname + desc + vers + updatedby + createdby;
 		}
-                
+                $('#display').append(xhtml +"</table>");
 			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
