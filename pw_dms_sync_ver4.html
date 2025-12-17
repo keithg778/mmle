@@ -43,7 +43,7 @@ th, td {
 			    var vers = "<td>" + data.instances[i].properties.Version + "</td>";
 			    var updatedby = "<td>" + data.instances[i].properties.FileUpdatedBy + "</td>";
                 var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";
-				$('#display').append(head + guid + name + fname + desc + vers + updatedby + createdby );
+				$('#display').append(guid + name + fname + desc + vers + updatedby + createdby );
 					}
 			$('#display').append("</table>");	
 		}
