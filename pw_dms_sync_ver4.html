@@ -34,7 +34,8 @@ th, td {
 			swal("Not found!", "", "warning");
 		    } else {
 			swal("Success!", "", "success");
-			var	xhtml =("<table><tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>");							   
+			var	xhtml =("<table><tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>");	
+				var xhtml1 = ""
 			for (var i=0; i<data.instances.length; i++){
 				var guid = "<tr><td>" + data.instances[i].instanceId + "</td>";
                 var name ="<td>" + data.instances[i].properties.Name + "</td>";
@@ -44,10 +45,10 @@ th, td {
 			    var updatedby = "<td>" + data.instances[i].properties.FileUpdatedBy + "</td>";
                 var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";			
 					}
-				xhtml = xhtml + guid + name + fname + desc + vers + updatedby + createdby;
+				xhtml1 = xhtml1 + guid + name + fname + desc + vers + updatedby + createdby;
 		}
-					alert(xhtml);
-                $('#display').html(xhtml +"</table>");
+					alert(xhtml+xhtml1);
+                $('#display').append(xhtml + xhtml1 +"</table>");
 			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
