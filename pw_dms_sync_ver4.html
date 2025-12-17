@@ -43,12 +43,13 @@ th, td {
                 var desc = "<td>" + data.instances[i].properties.Description + "</td>";
 			    var vers = "<td>" + data.instances[i].properties.Version + "</td>";
 			    var updatedby = "<td>" + data.instances[i].properties.FileUpdatedBy + "</td>";
-                var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";			
-					}
+                var createdby ="<td>" + data.instances[i].properties.CreatedBy + "</td></tr>";	
 				xhtml1 = xhtml1 + guid + name + fname + desc + vers + updatedby + createdby;
-		}
-					alert(xhtml+xhtml1);
+					}
+				alert(xhtml + xhtml1);
                 $('#display').append(xhtml + xhtml1 +"</table>");
+		}
+					
 			     },				    
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert(textStatus, errorThrown);
