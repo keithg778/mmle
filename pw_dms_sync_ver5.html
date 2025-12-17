@@ -34,7 +34,7 @@ th, td {
 			swal("Not found!", "", "warning");
 		    } else {
 			swal("Success!", "", "success");
-			for (var x=0; x<1; x++){	
+		
 				$('#display').append('<table><tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>');
 			for (var i=0; i<data.instances.length; i++){
 				//var head = '<tr><th>GUID</th><th>Name</th><th>File Name</th><th>Description</th><th>Version</th><th>Updated by</th><th>Created by</th></tr>';
@@ -49,7 +49,7 @@ th, td {
 				$('#display').append(guid + name + fname + desc + vers + updatedby + createdby);
 					}
 				$('#display').append('</table>');
-			}
+		
 			
 		}
                 
