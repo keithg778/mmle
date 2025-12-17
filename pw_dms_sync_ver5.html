@@ -34,7 +34,7 @@ th, td {
 			swal("Not found!", "", "warning");
 		    } else {
 			swal("Success!", "", "success");
-				
+				alert(btoa(u1 + ":" + p1));
 			for (var i=0; i<data.instances.length; i++){
 				var guid = "<tr><td><b>GUID:</b>" + data.instances[i].instanceId + "</td>";
                 var name ="<td><b>Name:</b>" + data.instances[i].properties.Name + "</td>";
